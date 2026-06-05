@@ -159,7 +159,6 @@
 
   <div class="section-title">
     <h2>Featured Projects</h2>
-    <a href="#">View All Projects →</a>
   </div>
 
   <div class="projects-grid">
@@ -169,8 +168,8 @@
   <img src="images/mealstub.png">
 </div>
       <h3>Meal Allocation Counter</h3>
-      <p>Meal Allocation Counter is an automated meal tracking system that monitors and summarizes Organic and
-         Inorganic meal stubs for Breakfast, Lunch, and Dinner, generating daily reports for easier monitoring and reporting.</p>
+      <p>Meal Allocation Counter is an automated meal tracking system that monitors and summarizes 
+        meal stubs for Breakfast, Lunch, and Dinner, generating daily reports for easier monitoring and reporting.</p>
       <span>n8n</span>
       <span>Google API</span>
     </div>
@@ -185,6 +184,7 @@
       <span>n8n</span>
       <span>Ollama</span>
       <span>OpenAI</span>
+      <span>REST API</span>
       <span>FastAPI</span> 
       <span>HubSpot</span>
       <span>Qdrant</span>
@@ -219,13 +219,15 @@
 
     </div>
 
-    <button class="cta-btn">
-      Get In Touch
-    </button>
+    <button class="cta-btn" onclick="openContactModal()">
+  Get In Touch
+</button>
 
   </div>
 
 </section>
+
+
 
 <footer class="footer">
   <p>© 2026 Elvin Basubas. All rights reserved.</p>
@@ -234,6 +236,36 @@
 <div class="lightbox" id="lightbox">
   <span class="close">&times;</span>
   <img id="lightbox-img">
+</div>
+
+<div class="contact-modal" id="contactModal">
+
+  <div class="contact-box">
+
+    <span class="close-contact">&times;</span>
+
+    <h2>Get In Touch</h2>
+
+    <p>
+      Interested in working together? Send me a message.
+    </p>
+
+   <form class="contact-form" onsubmit="sendMessage(event)">
+
+      <input type="text" placeholder="Your Name">
+
+      <input type="email" placeholder="Your Email">
+
+      <textarea placeholder="Your Message"></textarea>
+
+      <button type="submit">
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+
 </div>
 
 
@@ -254,6 +286,50 @@
       document.getElementById("lightbox").style.display = "none";
     }
   };
+
+  function openContactModal() {
+    document.getElementById("contactModal").style.display = "flex";
+  }
+
+  document.querySelector(".close-contact").onclick = function () {
+    document.getElementById("contactModal").style.display = "none";
+  };
+
+  document.getElementById("contactModal").onclick = function (event) {
+    if (event.target.id === "contactModal") {
+      document.getElementById("contactModal").style.display = "none";
+    }
+  };
+
+  async function sendMessage(event) {
+    event.preventDefault();
+
+    const name = document.querySelector('input[placeholder="Your Name"]').value;
+
+    const email = document.querySelector('input[placeholder="Your Email"]').value;
+
+    const message = document.querySelector('textarea').value;
+
+    await fetch("https://n8n.eq-server.com/webhook/portfolio", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      body: JSON.stringify({
+        name,
+        email,
+        message
+      })
+    });
+
+    alert("Message sent successfully!");
+
+    document.querySelector(".contact-form").reset();
+
+    document.getElementById("contactModal").style.display = "none";
+  }
 </script>
 
 </body>
