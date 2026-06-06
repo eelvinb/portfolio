@@ -478,22 +478,38 @@ html {
   }
 
   .hero {
+    min-height: auto;
     flex-direction: column;
-    padding: 40px 25px 80px;
-    text-align: center;
+    padding: 80px 24px 60px;
+    text-align: left;
   }
 
-  .hero-text,
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .hero-text {
+    order: 1;
+  }
+
   .hero-image {
-    width: 100%;
+    order: 2;
+    width: 240px;
+    height: 240px;
+    margin: 0 auto;
   }
 
   .hero-text h1 {
-    font-size: 48px;
+    font-size: 16px;
+    line-height: 1.08;
   }
 
   .hero-text p {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 100%;
   }
 
   .hero-buttons {
