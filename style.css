@@ -470,10 +470,48 @@ html {
 
 @media (max-width: 900px) {
 
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    gap: 14px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 40px 20px 60px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: flex-start;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+    line-height: 0.95;
+    margin-bottom: 18px;
+  }
+
   .hero p {
     font-size: 15px;
     line-height: 1.7;
     color: rgba(255,255,255,0.75);
+    max-width: 100%;
   }
 
   .hero-image {
@@ -492,12 +530,19 @@ html {
     justify-content: space-between;
     align-items: center;
     gap: 8px;
+
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .floating-card::-webkit-scrollbar {
+    display: none;
   }
 
   .floating-card .item {
     min-width: 60px;
     text-align: center;
+    flex-shrink: 0;
   }
 
   .floating-card h4 {
@@ -507,17 +552,8 @@ html {
 
   .floating-card p {
     font-size: 9px;
+    line-height: 1.4;
   }
-
-  .navbar {
-    padding: 16px 20px;
-  }
-
-  .nav-links {
-    gap: 14px;
-    font-size: 12px;
-  }
-}
 
   .about-section,
   .services-section,
@@ -529,6 +565,7 @@ html {
 
   .about-section {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .cta-content {
@@ -538,14 +575,18 @@ html {
   }
 }
 
+/* LIGHTBOX */
+
 .lightbox {
   display: none;
   position: fixed;
   z-index: 999;
   inset: 0;
   background: rgba(2, 6, 23, 0.9);
+
   justify-content: center;
   align-items: center;
+
   padding: 40px;
 }
 
@@ -558,8 +599,11 @@ html {
 .close {
   position: absolute;
   top: 30px;
-  right: 50px;
+  right: 40px;
+
   color: white;
-  font-size: 45px;
+  font-size: 42px;
+  font-weight: 300;
+
   cursor: pointer;
 }
