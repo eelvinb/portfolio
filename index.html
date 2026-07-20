@@ -1,314 +1,441 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
 
-<head>
-  <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  </head>
 
-  <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <body>
+    <nav class="navbar">
+      <div class="logo">EB</div>
 
-</head>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-<body>
+    <section class="hero" id="about">
+      <div class="hero-text">
+        <h3>AI AUTOMATION &amp; WORKFLOW ENGINEER</h3>
 
-  <nav class="navbar">
-  <div class="logo">EB</div>
+        <h1>
+          Hi, I'm <br />
+          Elvin Basubas
+        </h1>
 
-<div class="nav-links">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</div>
-</nav>
+        <p>
+          Electrical Engineer board passer transitioning into AI Automation and
+          Workflow Engineering. I design and implement automation systems using
+          n8n, APIs, vector databases, and AI models to streamline business
+          processes.
+        </p>
 
-<section class="hero" id="about">
+        <div class="floating-card">
+          <div class="skill-box">
+            <i data-lucide="workflow"></i>
+            <h4>Workflow</h4>
+            <p>Automation</p>
+          </div>
 
-  <div class="hero-text">
+          <div class="skill-box">
+            <i data-lucide="code-2"></i>
+            <h4>Web</h4>
+            <p>Development</p>
+          </div>
 
-    <h3>AI AUTOMATION & WORKFLOW ENGINEER</h3>
+          <div class="skill-box">
+            <i data-lucide="brain"></i>
+            <h4>AI</h4>
+            <p>Integrations</p>
+          </div>
 
-    <h1>
-      Hi, I'm <br>
-      Elvin Basubas
-    </h1>
+          <div class="skill-box">
+            <i data-lucide="database"></i>
+            <h4>Vector DB</h4>
+            <p>Qdrant</p>
+          </div>
 
-    <p>
-      Electrical Engineer board passer transitioning into AI Automation and Workflow Engineering.
-      I design and implement automation systems using n8n, APIs, vector databases,
-      and AI models to streamline business processes.
-    </p>
+          <div class="skill-box">
+            <i data-lucide="webhook"></i>
+            <h4>API</h4>
+            <p>Webhooks</p>
+          </div>
 
-    <div class="floating-card">
-      <div class="skill-box">
-        <i data-lucide="workflow"></i>
-        <h4>Workflow</h4>
-        <p>Automation</p>
+          <div class="skill-box">
+            <i data-lucide="settings-2"></i>
+            <h4>Process</h4>
+            <p>Optimization</p>
+          </div>
+        </div>
       </div>
 
-      <div class="skill-box">
-        <i data-lucide="brain"></i>
-        <h4>AI</h4>
-        <p>Integrations</p>
+      <div class="hero-image">
+        <div class="circle">
+          <img src="images/profile.png" alt="Elvin Basubas" />
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <h2>What I Do</h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>AI Workflow Automation</h3>
+          <p>
+            Build automation workflows using n8n and APIs to eliminate
+            repetitive tasks.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>Booking Systems</h3>
+          <p>
+            Build custom online booking systems with real-time availability,
+            payment submission, and automated confirmations.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>API Integrations</h3>
+          <p>
+            Connect apps and services using APIs and webhooks for seamless data
+            flow.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>RAG &amp; AI Assistants</h3>
+          <p>
+            Create AI assistants with vector databases and retrieval systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="section-title">
+        <h2>Featured Projects</h2>
       </div>
 
-      <div class="skill-box">
-        <i data-lucide="database"></i>
-        <h4>Vector DB</h4>
-        <p>Qdrant</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div
+            class="project-image"
+            onclick="openGallery([
+        'images/pcb2.png',
+        'images/pcb1.png',
+      ])"
+          >
+            <img
+              src="images/pcb3.png"
+              alt="PickleCourt booking system screenshot"
+            />
+          </div>
+          <h3>PickleCourt Booking System</h3>
+          <p>
+            A web-based pickleball court reservation system that allows
+            customers to view available court schedules, book time slots, and
+            receive automated booking confirmations in real time. The system
+            uses calendar-based availability checking and workflow automation to
+            prevent double bookings.
+          </p>
+          <p>
+            <a
+              href="https://picklecourt-booking.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              https://picklecourt-booking.vercel.app/
+            </a>
+          </p>
+          <span>n8n</span>
+          <span>Next.js</span>
+          <span>Tailwind CSS</span>
+          <span>Google APIs</span>
+          <span>Vercel</span>
+        </div>
+
+        <div class="project-card">
+          <div
+            class="project-image"
+            onclick="openGallery(['images/salesagent.png'])"
+          >
+            <img
+              src="images/salesagent.png"
+              alt="AI-powered sales assistant screenshot"
+            />
+          </div>
+          <h3>AI-Powered Sales Assistant</h3>
+
+          <p>
+            AI-powered Facebook Messenger sales assistant that uses Ollama to
+            detect customer sales intent, engage qualified leads, automate
+            customer information collection, and synchronize CRM records through
+            OpenAI, n8n, FastAPI, HubSpot, and Qdrant.
+          </p>
+          <span>n8n</span>
+          <span>Ollama</span>
+          <span>OpenAI</span>
+          <span>REST API</span>
+          <span>HubSpot</span>
+          <span>Qdrant</span>
+        </div>
+
+        <div class="project-card">
+          <div
+            class="project-image"
+            onclick="openGallery(['images/mealstub.png'])"
+          >
+            <img
+              src="images/mealstub.png"
+              alt="Meal allocation counter screenshot"
+            />
+          </div>
+          <h3>Meal Allocation Counter</h3>
+          <p>
+            Meal Allocation Counter is an automated meal tracking system that
+            monitors and summarizes meal stubs for Breakfast, Lunch, and Dinner,
+            generating daily reports for easier monitoring and reporting.
+          </p>
+          <span>n8n</span>
+          <span>Google API</span>
+        </div>
       </div>
+    </section>
 
-      <div class="skill-box">
-        <i data-lucide="webhook"></i>
-        <h4>API</h4>
-        <p>Webhooks</p>
+    <section class="cta-section" id="contact">
+      <div class="cta-content">
+        <div>
+          <h2>Let's build something amazing together.</h2>
+
+          <p>I'm open to freelance projects and full-time opportunities.</p>
+        </div>
+
+        <button type="button" class="cta-btn" onclick="openContactModal()">
+          Get In Touch
+        </button>
       </div>
+    </section>
 
-      <div class="skill-box">
-        <i data-lucide="settings-2"></i>
-        <h4>Process</h4>
-        <p>Optimization</p>
-      </div>
-    </div>
+    <footer class="footer">
+      <p>© 2026 Elvin Basubas. All rights reserved.</p>
+    </footer>
 
-  </div>
-
-  <div class="hero-image">
-    <div class="circle">
-      <img src="images/profile.png">
-    </div>
-  </div>
-
-</section>
-
-<section class="services-section" id="services">
-
-  <h2>What I Do</h2>
-
-  <div class="services-grid">
-
-    <div class="service-card">
-      <h3>AI Workflow Automation</h3>
-
-      <p>
-        Build automation workflows using n8n and APIs
-        to eliminate repetitive tasks.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <h3>API Integrations</h3>
-
-      <p>
-        Connect apps and services using APIs and webhooks
-        for seamless data flow.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <h3>RAG & AI Assistants</h3>
-
-      <p>
-        Create AI assistants with vector databases
-        and retrieval systems.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <h3>CRM Automation</h3>
-
-      <p>
-        Automate lead management, customer workflows,
-        and CRM processes.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="projects-section" id="projects">
-
-  <div class="section-title">
-    <h2>Featured Projects</h2>
-  </div>
-
-  <div class="projects-grid">
-
-   <div class="project-card">
-      <div class="project-image ongoing-project" >ONGOING PROJECT</div>
-      <h3>PickleCourt Booking System</h3>
-      <p>A web-based pickleball court reservation system that allows customers to view available court schedules, book time slots, 
-        and receive automated booking confirmations in real time. The system uses calendar-based availability checking and workflow 
-        automation to prevent double bookings.</p>
-      <span>n8n</span>
-      <span>Next.js</span>
-      <span>Tailwind CSS</span>
-      <span>Google APIs</span>
-      <span>Vercel</span>
-    </div>  
-
-
-  <div class="project-card">
-      <div class="project-image" onclick="openLightbox('images/salesagent.png')">
-      <img src="images/salesagent.png">
-  </div>
-      <h3>AI-Powered Sales Assistant</h3>
-
-      <p>AI-powered Facebook Messenger sales assistant that uses Ollama to detect customer sales intent, engage qualified leads, 
-        automate customer information collection, and synchronize CRM records through OpenAI, n8n, FastAPI, HubSpot, and Qdrant.</p>
-      <span>n8n</span>
-      <span>Ollama</span>
-      <span>OpenAI</span>
-      <span>REST API</span>
-      <span>HubSpot</span>
-      <span>Qdrant</span>
-  </div>
-
-  <div class="project-card">
-      <div class="project-image" onclick="openLightbox('images/mealstub.png')">
-      <img src="images/mealstub.png">
-  </div>
-      <h3>Meal Allocation Counter</h3>
-      <p>Meal Allocation Counter is an automated meal tracking system that monitors and summarizes 
-        meal stubs for Breakfast, Lunch, and Dinner, generating daily reports for easier monitoring and reporting.</p>
-      <span>n8n</span>
-      <span>Google API</span>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="cta-section" id="contact">
-
-  <div class="cta-content">
-
-    <div>
-
-      <h2>
-        Let's build something amazing together.
-      </h2>
-
-      <p>
-        I'm open to freelance projects and full-time opportunities.
-      </p>
-
-    </div>
-
-    <button class="cta-btn" onclick="openContactModal()">
-  Get In Touch
-</button>
-
-  </div>
-
-</section>
-
-
-
-<footer class="footer">
-  <p>© 2026 Elvin Basubas. All rights reserved.</p>
-</footer>
-
-<div class="lightbox" id="lightbox">
-  <span class="close">&times;</span>
-  <img id="lightbox-img">
-</div>
-
-<div class="contact-modal" id="contactModal">
-
-  <div class="contact-box">
-
-    <span class="close-contact">&times;</span>
-
-    <h2>Get In Touch</h2>
-
-    <p>
-      Interested in working together? Send me a message.
-    </p>
-
-   <form class="contact-form" onsubmit="sendMessage(event)">
-
-      <input type="text" placeholder="Your Name">
-
-      <input type="email" placeholder="Your Email">
-
-      <textarea placeholder="Your Message"></textarea>
-
-      <button type="submit">
-        Send Message
+    <div class="gallery-modal" id="galleryModal">
+      <button type="button" class="gallery-close" onclick="closeGallery()">
+        &times;
       </button>
 
-    </form>
+      <button
+        type="button"
+        class="gallery-arrow gallery-prev"
+        onclick="changeImage(-1)"
+      >
+        &#10094;
+      </button>
 
-  </div>
+      <img id="galleryImage" class="gallery-image" alt="Project screenshot" />
 
-</div>
+      <button
+        type="button"
+        class="gallery-arrow gallery-next"
+        onclick="changeImage(1)"
+      >
+        &#10095;
+      </button>
 
+      <p id="galleryCounter" class="gallery-counter"></p>
+    </div>
 
-<script>
-  lucide.createIcons();
+    <div class="contact-modal" id="contactModal">
+      <div class="contact-box">
+        <button
+          type="button"
+          class="close-contact"
+          aria-label="Close contact form"
+        >
+          &times;
+        </button>
 
-  function openLightbox(imageSrc) {
-    document.getElementById("lightbox-img").src = imageSrc;
-    document.getElementById("lightbox").style.display = "flex";
-  }
+        <h2>Get In Touch</h2>
 
-  document.querySelector(".close").onclick = function () {
-    document.getElementById("lightbox").style.display = "none";
-  };
+        <p>Interested in working together? Send me a message.</p>
 
-  document.getElementById("lightbox").onclick = function (event) {
-    if (event.target.id === "lightbox") {
-      document.getElementById("lightbox").style.display = "none";
-    }
-  };
+        <form
+          class="contact-form"
+          id="contactForm"
+          onsubmit="sendMessage(event)"
+        >
+          <input
+            id="contactName"
+            name="name"
+            type="text"
+            placeholder="Your Name"
+            required
+          />
 
-  function openContactModal() {
-    document.getElementById("contactModal").style.display = "flex";
-  }
+          <input
+            id="contactEmail"
+            name="email"
+            type="email"
+            placeholder="Your Email"
+            required
+          />
 
-  document.querySelector(".close-contact").onclick = function () {
-    document.getElementById("contactModal").style.display = "none";
-  };
+          <textarea
+            id="contactMessage"
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
 
-  document.getElementById("contactModal").onclick = function (event) {
-    if (event.target.id === "contactModal") {
-      document.getElementById("contactModal").style.display = "none";
-    }
-  };
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
 
-  async function sendMessage(event) {
-    event.preventDefault();
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+      });
 
-    const name = document.querySelector('input[placeholder="Your Name"]').value;
+      let galleryImages = [];
+      let currentImageIndex = 0;
 
-    const email = document.querySelector('input[placeholder="Your Email"]').value;
+      function openGallery(images) {
+        galleryImages = images;
+        currentImageIndex = 0;
 
-    const message = document.querySelector('textarea').value;
+        document.getElementById("galleryModal").classList.add("show");
+        document.body.style.overflow = "hidden";
 
-    await fetch("https://n8n.eq-server.com/webhook/portfolio", {
-      method: "POST",
+        displayGalleryImage();
+      }
 
-      headers: {
-        "Content-Type": "application/json"
-      },
+      function displayGalleryImage() {
+        const galleryImage = document.getElementById("galleryImage");
+        const galleryCounter = document.getElementById("galleryCounter");
+        const previousButton = document.querySelector(".gallery-prev");
+        const nextButton = document.querySelector(".gallery-next");
 
-      body: JSON.stringify({
-        name,
-        email,
-        message
-      })
-    });
+        galleryImage.src = galleryImages[currentImageIndex];
 
-    alert("Message sent successfully!");
+        const hasMultipleImages = galleryImages.length > 1;
 
-    document.querySelector(".contact-form").reset();
+        previousButton.style.display = hasMultipleImages ? "block" : "none";
+        nextButton.style.display = hasMultipleImages ? "block" : "none";
+        galleryCounter.style.display = hasMultipleImages ? "block" : "none";
 
-    document.getElementById("contactModal").style.display = "none";
-  }
-</script>
+        galleryCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+      }
 
-</body>
+      function changeImage(direction) {
+        currentImageIndex += direction;
 
+        if (currentImageIndex < 0) {
+          currentImageIndex = galleryImages.length - 1;
+        }
+
+        if (currentImageIndex >= galleryImages.length) {
+          currentImageIndex = 0;
+        }
+
+        displayGalleryImage();
+      }
+
+      function closeGallery() {
+        document.getElementById("galleryModal").classList.remove("show");
+        document.body.style.overflow = "";
+      }
+
+      document
+        .getElementById("galleryModal")
+        .addEventListener("click", function (event) {
+          if (event.target === this) {
+            closeGallery();
+          }
+        });
+
+      document.addEventListener("keydown", function (event) {
+        const modal = document.getElementById("galleryModal");
+
+        if (!modal.classList.contains("show")) {
+          return;
+        }
+
+        if (event.key === "ArrowLeft") {
+          changeImage(-1);
+        }
+
+        if (event.key === "ArrowRight") {
+          changeImage(1);
+        }
+
+        if (event.key === "Escape") {
+          closeGallery();
+        }
+      });
+
+      function openContactModal() {
+        document.getElementById("contactModal").style.display = "flex";
+      }
+
+      document.querySelector(".close-contact").onclick = function () {
+        document.getElementById("contactModal").style.display = "none";
+      };
+
+      document.getElementById("contactModal").onclick = function (event) {
+        if (event.target.id === "contactModal") {
+          document.getElementById("contactModal").style.display = "none";
+        }
+      };
+
+      async function sendMessage(event) {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const name = document.getElementById("contactName").value.trim();
+        const email = document.getElementById("contactEmail").value.trim();
+        const message = document.getElementById("contactMessage").value.trim();
+
+        try {
+          submitButton.disabled = true;
+          submitButton.textContent = "Sending...";
+
+          const response = await fetch(
+            "https://n8n.eq-server.com/webhook/portfolio",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ name, email, message }),
+            },
+          );
+
+          if (!response.ok) {
+            throw new Error("Unable to send message.");
+          }
+
+          alert("Message sent successfully!");
+          form.reset();
+          document.getElementById("contactModal").style.display = "none";
+        } catch (error) {
+          alert("Message could not be sent. Please try again.");
+          console.error(error);
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = "Send Message";
+        }
+      }
+    </script>
+  </body>
 </html>
